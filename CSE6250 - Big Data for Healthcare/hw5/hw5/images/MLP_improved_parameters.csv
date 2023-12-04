@@ -1,0 +1,12 @@
+,Modules,Parameters
+0,hidden1.weight,15842
+1,hidden1.bias,89
+2,hidden2.weight,3916
+3,hidden2.bias,44
+4,hidden3.weight,968
+5,hidden3.bias,22
+6,hidden4.weight,220
+7,hidden4.bias,10
+8,output.weight,50
+9,output.bias,5
+10,total,21166

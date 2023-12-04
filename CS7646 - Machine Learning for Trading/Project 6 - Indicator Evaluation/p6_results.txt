@@ -1,0 +1,13 @@
+Date Range: 2008-01-01 00:00:00 to 2009-12-31 00:00:00
+
+benchmark cumulative return: 0.0123
+benchmark avg daily return: 0.0001
+benchmark stddev daily return: 0.0141
+benchmark sharpe ratio: 0.1304
+benchmark final port value: 101230.0
+
+optimal cumulative return: 5.7861
+optimal avg daily return: 0.0026
+optimal stddev daily return: 0.0042
+optimal sharpe ratio: 10.0316
+optimal final port value: 678610.0

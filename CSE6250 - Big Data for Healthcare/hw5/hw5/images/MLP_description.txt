@@ -1,0 +1,5 @@
+MyMLP2(
+  (hidden): Linear(in_features=178, out_features=16, bias=True)
+  (output): Linear(in_features=16, out_features=5, bias=True)
+  (sigmoid): Sigmoid()
+)

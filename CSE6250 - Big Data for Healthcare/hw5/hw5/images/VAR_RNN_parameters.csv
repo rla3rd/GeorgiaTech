@@ -1,0 +1,10 @@
+,Modules,Parameters
+0,fc1.weight,58304
+1,fc1.bias,64
+2,rnn.weight_ih_l0,3072
+3,rnn.weight_hh_l0,768
+4,rnn.bias_ih_l0,48
+5,rnn.bias_hh_l0,48
+6,fc2.weight,32
+7,fc2.bias,2
+8,total,62338

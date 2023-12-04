@@ -1,0 +1,25 @@
+name: pytorch
+channels:
+  - conda-forge
+  - auto
+  - defaults
+dependencies:
+  - python=3.7
+  - pytorch
+  - cudatoolkit=11.0
+  - torchaudio
+  - torchvision
+  - ipykernel
+  - numpy
+  - tqdm
+  - pandas
+  - matplotlib
+  - scikit-image
+  - jupyter
+  - scikit-learn
+  - tensorboardx
+  - opencv
+  - scipy=1.5.3
+  - pyspark
+  - findspark
+  - seaborn

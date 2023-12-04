@@ -1,0 +1,26 @@
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/base2.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/base3.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<div>
+  <a href="{{ url_for('main.index') }}" class="tab">Home</a>
+  <a href="{{ url_for('main.dashboard') }}" class="tab">Dashboard</a>
+  {% if current_user.is_anonymous %}
+  <a href="{{ url_for('main.login') }}" class="tab">Login</a>
+  {% else %}
+  <a href="{{ url_for('main.logout') }}" class="tab">Logout</a>
+  {% endif %}
+  {% with messages = get_flashed_messages() %}
+  {% if messages %}
+  <ul>
+      {% for message in messages %}
+      <li>{{ message }}</li>
+      {% endfor %}
+  </ul>
+  {% endif %}
+  {% endwith %}
+  {% block content %}
+  {% endblock %}
+</div>

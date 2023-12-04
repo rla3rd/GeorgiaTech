@@ -1,0 +1,45 @@
+1. Ease to develop for developers
+    Flot: Easy - This is a high level chart library. It depends on the use of JQuery 
+        which has fallen out of favor vs react lately,
+        but makes development much easier for an enty level javascript developer. 
+        This is a canvas based library, so the chart elements are not part of the DOM,
+        the chart is created via draw methods inside the html canvas element. 
+        It has numerous plugins to easily create additional chart types not part of its standard library.
+    Tableau: Easy - Tableau has a drag and drop gui and the software is well documented.
+        The software is not free, with the proliferation of open source tools it may not
+        be a developers first choice.  The target customer is different than both D3 and Flot.
+    D3: Medium - Has select syntax similar to JQuery built-in.  Does not need JQuery. 
+        This is a SVG based libary and chart elements are visible as part of the DOM.
+2. Ease to maintain the visualization for developers 
+    Flot: Easy for vanilla charts, Hard for highly customized charts. I have used this 
+        library in production for years. Once you start doing complex charts, you end 
+        up hacking around in the library internals to force it to do what you want.
+    Tableau: Easy - Tableau is a BI Tool, there is no programming required. You have 
+        to understand your data only in order to use the gui well to maintain the charts.
+    D3: Medium - This library is a low level SVG graphics library.  Its more complex 
+        to set up simple charts than flot, but once you start making complex charts 
+        it becomes easier to maintain than flot, because the library internals do 
+        not get in the way.
+3. Usability of visualization developed for end users [40 words]
+    Flot: Limited - you can interact with the chart using standard html control elements via JQuery Binding. 
+        You are limited to Popups, Panning, Zooming, and turning a data series on/off. You can build 
+        in more complex interactions, but you are then hacking the library internals.
+    Tableau: Not Sure - Seems limited to interactivity of charts on Tableau Public Server.
+    D3: Very Flexible -you can interact with the chart using standard html control elements by 
+        binding to the DOM event handlers, similar to Flot.  Since the graph is actually part of the DOM, 
+        everything  inside is able to be manipulated, so you can actually manipulate each graph 
+        element easily.
+4. Scalability of visualization to “large” datasets [40 words]
+    Flot: Somewhat Scalable - I've been able to support a few hundred thousand rows in flot with one caveat, 
+        the chart can be slow to render. Since it is canvas based, it is lighter weight on browser 
+        resources because it does not need to hold individual elements in the DOM.
+    Tableau: Very Scalable - The desktop version is scalable to billions of rows. It supports remote 
+        connectors so you can pull your data in from a database or other server.  The online version 
+        is going to be more limited in big data support.
+    D3: Somewhat Scalable - This will be less responsive than Flot for the same amount of data.
+        SVG graphics are not hardware optimized in the browser. The complete graphic is also part 
+        of the DOM, so large amounts of data will severly cripple the browser's performance.
+5. System requirements to run the visualization (e.g., browsers, OS, software licensing) for end users [40 words]
+    Flot: http://www.flotcharts.org/ OS Independent, MIT License, runs in Chrome, Edge, Firefox 2+, Safari 3+, IE 6+, Opera 9.5+, Free to Develop
+    Tableau: https://www.tableau.com/, OS Independent(Online), AWS(Server), Windows 7+, OSX 10.11 (Desktop), Subscription Model Pricing
+    D3: https://d3js.org/ OS Independent, BSD 3-Clause License, runs in Chrome, Edge, Firefox, Safari, IE 9+, Free to Develop

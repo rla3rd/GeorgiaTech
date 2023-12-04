@@ -1,0 +1,16 @@
+,Modules,Parameters
+0,conv1.weight,30
+1,conv1.bias,6
+2,conv2.weight,480
+3,conv2.bias,16
+4,fc1.weight,335872
+5,fc1.bias,512
+6,fc2.weight,131072
+7,fc2.bias,256
+8,fc3.weight,32768
+9,fc3.bias,128
+10,fc4.weight,8192
+11,fc4.bias,64
+12,fc5.weight,320
+13,fc5.bias,5
+14,total,509721

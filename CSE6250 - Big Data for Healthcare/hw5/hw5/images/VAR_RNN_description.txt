@@ -1,0 +1,6 @@
+MyVariableRNN2(
+  (fc1): Linear(in_features=911, out_features=64, bias=True)
+  (tanh): Tanh()
+  (rnn): GRU(64, 16, batch_first=True)
+  (fc2): Linear(in_features=16, out_features=2, bias=True)
+)

@@ -1,0 +1,9 @@
+rawreviews = LOAD 's3://amazon-reviews-pds/tsv/*' AS (marketplace:chararray,customer_id:chararray,review_id:chararray,product_id:chararray,product_parent:chararray,product_title:chararray,product_category:chararray,star_rating:double,helpful_votes:int,total_votes:int,vine:chararray,verified_purchase:chararray,review_headline:chararray,review_body:chararray, review_date:chararray);
+verified = FILTER rawreviews BY verified_purchase == 'Y';
+votes = FILTER verified BY total_votes >= 30;
+reviews = FILTER votes BY SIZE(review_body) >= 100;
+categories = GROUP reviews BY product_category;   
+averages = FOREACH categories GENERATE group, AVG(reviews.star_rating) AS star_rating;
+ordered = ORDER averages BY star_rating DESC, group ASC;
+limits = LIMIT ordered 15;
+STORE limits INTO 's3://cse6242oan-2019fall-ralbright7/pig-large/pig-output.txt' using PigStorage('\t');

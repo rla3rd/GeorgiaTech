@@ -1,0 +1,1 @@
+Non linear scales are useful when the data is not uniformly distributed and clustered around specific values on the chosen xy plane.  It becomes much easier to visualize the data if it is given enough space to see the differences.

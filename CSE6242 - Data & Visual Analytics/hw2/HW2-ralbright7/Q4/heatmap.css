@@ -1,0 +1,20 @@
+.tooltip {
+    position: absolute;
+    padding: 4px;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.select {
+    position: absolute;
+    padding: 4px;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.heatmap_legend {
+    position: absolute;
+    padding: 4px;
+    border-radius: 4px;
+    background-color: white;
+}

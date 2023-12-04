@@ -1,0 +1,4 @@
+MyRNN2(
+  (rnn): GRU(1, 16, batch_first=True)
+  (fc): Linear(in_features=16, out_features=5, bias=True)
+)

@@ -1,0 +1,6 @@
+,Modules,Parameters
+0,hidden.weight,2848
+1,hidden.bias,16
+2,output.weight,80
+3,output.bias,5
+4,total,2949
